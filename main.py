@@ -2,6 +2,7 @@ from kivy.app import App
 from kivy.uix.screenmanager import ScreenManager
 from players_input_scr import PlayersInputScr
 from peaceful_input_scr import PeacefulInputScr
+from mafia_input_scr import MafiaInputScr
 
 class MyApp(App):
     players_count = 0
@@ -14,6 +15,7 @@ class MyApp(App):
         scrm = ScreenManager()
         scrm.add_widget(PlayersInputScr(name = 'scr1'))
         scrm.add_widget(PeacefulInputScr(name = 'scr2'))
+        scrm.add_widget(MafiaInputScr(name = 'scr3'))
         return scrm
 app = MyApp()
 app.run()
