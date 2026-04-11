@@ -6,6 +6,7 @@ from mafia_input_scr import MafiaInputScr
 from doctor_input_scr import DoctorInputScr
 from prostitute_input_scr import ProstituteInputScr
 from comisar_input_scr import ComisarInputScr
+from role_scr import RoleScr
 
 class MyApp(App):
     players_count = 0
@@ -22,6 +23,7 @@ class MyApp(App):
         scrm.add_widget(DoctorInputScr(name = 'scr4'))
         scrm.add_widget(ProstituteInputScr(name = 'scr5'))
         scrm.add_widget(ComisarInputScr(name = 'scr6'))
+        scrm.add_widget(RoleScr(name = 'scr7'))
         return scrm
 app = MyApp()
 app.run()
