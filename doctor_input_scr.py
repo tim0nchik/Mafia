@@ -7,3 +7,20 @@ from kivy.app import App
 class DoctorInputScr(Screen):
     def __init__(self, **kw):
         super().__init__(**kw)
+        app = App.get_running_app()
+        text = Label(text = 'Выберите кол-во докторов')
+        button1 = Button(text = '1')
+        button2 = Button(text = '0')
+        hbl = BoxLayout(orientation = 'vertical')
+        hbl.add_widget(text)
+        hbl.add_widget(button1)
+        hbl.add_widget(button2)
+        self.add_widget(hbl)
+        def but1():
+            app.doctor_count = 1
+            self.manager.current = 'scr5'
+        button1.on_press = but1
+        def but2():
+            app.doctor_count = 0
+            self.manager.current = 'scr5'
+        button2.on_press = but2
