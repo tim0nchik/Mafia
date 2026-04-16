@@ -22,5 +22,5 @@ class ComisarInputScr(Screen):
         button1.on_press = but1
         def but2():
             app.comisar_count = 0
-            self.managet.current = 'scr7'
+            self.manager.current = 'scr7'
         button2.on_press = but2

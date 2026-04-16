@@ -22,5 +22,5 @@ class ProstituteInputScr(Screen):
         button1.on_press = but1
         def but2():
             app.prostitute_count = 0
-            self.managet.current = 'scr6'
+            self.manager.current = 'scr6'
         button2.on_press = but2
